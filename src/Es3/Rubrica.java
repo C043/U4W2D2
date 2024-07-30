@@ -6,13 +6,13 @@ import java.util.Objects;
 import java.util.Set;
 
 public class Rubrica {
-    private Map<String, String> rubrica = new HashMap<>();
+    private final Map<String, String> rubrica = new HashMap<>();
 
-    public void addContact(String name, String number) throws NullPointerException {
+    public void addContact(String name, String number) {
         this.rubrica.putIfAbsent(name.toLowerCase(), number);
     }
 
-    public void removeContact(String name) throws NullPointerException {
+    public void removeContact(String name) {
         this.rubrica.remove(name.toLowerCase());
     }
 
