@@ -45,8 +45,7 @@ public class Main {
     }
 
     public static List<Integer> reversedList(List<Integer> list) {
-        List<Integer> newList = new ArrayList<>();
-        newList.addAll(list);
+        List<Integer> newList = new ArrayList<>(list);
         newList.addAll(list.reversed());
         return newList;
     }
