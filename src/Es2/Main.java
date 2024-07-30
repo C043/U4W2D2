@@ -6,7 +6,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 import static java.lang.Integer.parseInt;
-import static java.util.Collections.reverse;
 import static java.util.Collections.sort;
 
 public class Main {
@@ -46,12 +45,10 @@ public class Main {
     }
 
     public static List<Integer> reversedList(List<Integer> list) {
-        List<Integer> listCopy = new ArrayList<>(list);
-        List<Integer> completedList = new ArrayList<>();
-        reverse(listCopy);
-        completedList.addAll(list);
-        completedList.addAll(listCopy);
-        return completedList;
+        List<Integer> newList = new ArrayList<>();
+        newList.addAll(list);
+        newList.addAll(list.reversed());
+        return newList;
     }
 
     public static void printEvenOrOdd(List<Integer> list, boolean bool) {
